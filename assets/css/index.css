@@ -71,12 +71,12 @@ body {
 }
 
 body {
-    background: linear-gradient( #ffffff, #000000 );  /* fallback for old browsers */
+    background: linear-gradient( #ffffff -50% , #000000 );  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #6561a7, #b268c0, #77cbd2);  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to right, #6561a7, #b268c0, #77cbd2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
-    /*background-size: 600% 600%;*/
+    background-size: 600% 600%;
     -webkit-animation: dynBackground 30s ease infinite;
     -moz-animation: dynBackground 30s ease infinite;
     animation: dynBackground 30s ease infinite;
