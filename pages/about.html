@@ -1,0 +1,137 @@
+---
+layout: null
+title: about
+permalink: /about/
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>About us</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/assets/css/about.css" rel="stylesheet">
+
+  </head>
+  <body id="page-top">
+<div class="inner">
+          <nav class="navbar navbar-dark nav-masthead justify-content-center">
+            <a class="nav-masthead nav-link" href="/"><h5><img src='/assets/images/logo.png' class="logo_img">SpotiPy</h5></a>
+            <a class="nav-link active" href="/about/"><h5>About</h5></a>
+            <a class="nav-link" href="/albums/"><h5>Albums</h5></a>
+            <a class="nav-link" href="/artists/"><h5>Artists</h5></a>
+            <a class="nav-link" href="/tracks/"><h5>Tracks</h5></a>
+          </nav>
+        </div>
+
+
+<!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          
+          <h2 class="text-secondary mb-5">The Quad Squad</h2>
+            <h3 class="mb-0">About us</h3>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <a class="portfolio-item" onmouseover="Show('a1')" onmouseout="Hide('a1')">
+              <span class="caption">
+                <span id="a1" class="caption-content" style="display:none">
+                  <h2>Nathan Berryhill</h2>
+                  <p class="mb-0">Nathan is a Senior Mathematics major pursuing the Elements of Computing Certificate.</p>
+                  <p class="mb-0">Nathan was the chief of ETL and scripting, responsible for creating a few landing pages, setting up the Slack notifications, JSON extraction and file transformation to create all tsv files, flask setup, and for 800 words of the technical report.</p>
+                  <p class="mb-0"># Commits: 97<br>
+                  # Issues: 15<br>
+                  # Unit Tests: 3</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="/assets/images/nathan.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" onmouseover="Show('a2')" onmouseout="Hide('a2')">
+              <span class="caption">
+                <span id="a2" class="caption-content" style="display:none">
+                  <h2 style="margin-top:2rem">Kate Zhou</h2>
+                  <p class="mb-0">Kate is a Senior Mathematics major pursuing the Elements of Computing Certificate.</p>
+                  <p class="mb-0">Kate was the chief of back-end design, responsible for setting up the GCP platform, creating the database instance using CloudSQL, setting up path and generalized templates, and 600 words of the technical report.</p>
+               <p class="mb-0"># Commits: 40<br>
+                  # Issues: 15<br>
+                  # Unit Tests: 0</p>
+	      </span>
+              </span>
+              <img class="img-fluid" src="/assets/images/kate.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" onmouseover="Show('a3')" onmouseout="Hide('a3')">
+              <span class="caption">
+                <span class="caption-content" id="a3" style="display:none">
+                  <h2>Dorian Bizgan</h2>
+                  <p class="mb-0">Dorian is a Junior Mathematics major pursuing the Elements of Computing Certificate.</p>
+                  <p class="mb-0">Dorian was the chief of front-end design, responsible for improving the aesthetics and layour of the website, and for 600 words of the technical report.</p>
+               <p class="mb-0"># Commits: 32<br>
+                  # Issues: 15<br>
+                  # Unit Tests: 0</p>
+               </span>
+              </span>
+              <img class="img-fluid" src="/assets/images/dorian.png" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" onmouseover="Show('a4')" onmouseout="Hide('a4')">
+              <span class="caption">
+                <span class="caption-content" id="a4" style="display:none">
+                  <h2>Bo Park</h2>
+                  <p class="mb-0">Bo is a Junior Chemical Engineering major pursuing the Elements of Computing Certificate.</p>
+                  <p class="mb-0">Bo was the chief historian and advisor, and was responsible for providing a generalized template for models, contributed to a handful of the path and landing page design and aesthetic, and for writing 1,000 words of the technical report.</p>
+               <p class="mb-0"># Commits: 12<br>
+                  # Issues: 15<br>
+                  # Unit Tests: 0</p>
+               </span>
+              </span>
+              <img class="img-fluid" src="/assets/images/bo.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+<dev class=stats>
+<b>Stats:</b>
+Total # of Commits: 210<br>
+Total # of Issues: 45<br>
+Total # of Unit Tests: 3<br>
+<a href="https://gitlab.com/nathanberryhill/cs329e-idb/issues">Gitlab Issue Tracker</a>
+<a href="https://gitlab.com/nathanberryhill/cs329e-idb">Gitlab Repository</a>
+<a href="https://gitlab.com/nathanberryhill/cs329e-idb/wikis/home">GitLab Wiki</a><br>
+<a href="https://speakerdeck.com/nathanberryhill/spotipy">SpeakDeck</a><br>
+<b>Data:</b> <a href="https://query.wikidata.org/">Wikidata</a> &nbsp;|&nbsp;<a href="https://developer.spotify.com/console">Spotify API</a><br>
+Wikidata was queried to retrieve &gt;7000 records containing a Spotify artist ID. After the retrieval from Wikidata, the Spotify API was used to get data on several artists. From this retrieval, we used Python to extract the information desired. The Spotify API was used again to retrieve data for an artist's albums. Again, we used Python to extract only the data desired. Lastly, the Spotify API was used again to retrieve data on an album's tracks. Python was used to extract only the desired data.
+<br><br>
+<b>Tools:</b> Gitlab, Slack (with GitLab integration), Google Cloud Platform (GCP), Python, Flask, SQLAlchemy, JavaScript<br><br>
+      </dev>
+<a class="unit_test" href="/test/">Run Unit Tests</a><br>
+<br>
+<br>
+</body>
+<!-- Bootstrap core JavaScript -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/assets/js/stylish-portfolio.min.js"></script>
+    <script src="/assets/js/hideShow.js"></script>
+
+</html>
