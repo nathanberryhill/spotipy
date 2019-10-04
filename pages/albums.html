@@ -59,7 +59,7 @@ permalink: /albums/
     {% endif %}
 </div>
         <div class="row no-gutters">
-          {% for album in site.data.albums2 %}
+          {% for album in site.data.albums %}
           <div class="col-lg-6">
             <a class="portfolio-item" href="{{ album.album_id }}" onmouseover='Show("{{ album.album_id }}")' onmouseout='Hide("{{album.album_id}}")'>
               <span class="caption">
