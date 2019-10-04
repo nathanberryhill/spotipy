@@ -59,16 +59,16 @@ permalink: /albums/
     {% endif %}
 </div>
         <div class="row no-gutters">
-          {% for row in albums.items %}
+          {% for album in site.data.albums %}
           <div class="col-lg-6">
-            <a class="portfolio-item" href="{{row.album_id}}" onmouseover=Show("{{row.album_id}}") onmouseout=Hide("{{row.album_id}}")>
+            <a class="portfolio-item" href="{{album.album_id}}" onmouseover=Show("{{album.album_id}}") onmouseout=Hide("{{album.album_id}}")>
               <span class="caption">
-                <span id="{{row.album_id}}" class="caption-content" style="display:none">
-                  <h2>{{row.album_name}}</h2>
-                  <p class="mb-0">by {{row.artist_name}}</p>
+                <span id="{{album.album_id}}" class="caption-content" style="display:none">
+                  <h2>{{album.album_name}}</h2>
+                  <p class="mb-0">by {{album.artist_name}}</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{{row.img}}" alt="">
+              <img class="img-fluid" src="{{album.img}}" alt="">
             </a>
           </div>
           {% endfor %} 
