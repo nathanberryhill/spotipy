@@ -45,20 +45,20 @@ permalink: /tracks/
           <h2 class="text-secondary mb-5">Tracks</h2>
         </div>
 <div class="sortSearch">
-          <a class="btn btn-default" href="{{ url_for('tracksPage',page=1,sort='track_name',direction='asc') }}">Sort by Track Name (asc)</a>
-<a class="btn btn-default" href="{{ url_for('tracksPage',page=1,sort='duration',direction='asc') }}">Sort by Duration (asc)</a>
+          <a class="btn btn-default" href="#">Sort by Track Name (asc)</a>
+<a class="btn btn-default" href="#">Sort by Duration (asc)</a>
 <br>
-          <a class="btn btn-default" href="{{ url_for('tracksPage',page=1,sort='track_name',direction='desc') }}">Sort by Track Name (desc)</a>
-          <a class="btn btn-default" href="{{ url_for('tracksPage',page=1,sort='duration',direction='desc') }}">Sort by Duration (desc)</a>
+          <a class="btn btn-default" href="#">Sort by Track Name (desc)</a>
+          <a class="btn btn-default" href="#">Sort by Duration (desc)</a>
 <br>
 {% if tracks.has_prev %}
-      <a class="btn btn-default prev" id="prev" href="{{ url_for('tracksPage',page=tracks.prev_num) }}" rel="prev">Prev</a>
+      <a class="btn btn-default prev" id="prev" href="#" rel="prev">Prev</a>
     {% endif %}
           <form>
-            <input id="search" type="text" placeholder="Search (Case-Sensitive!)" name="search" href="{{ url_for('tracksPage',page=1) }}">
+            <input id="search" type="text" placeholder="Search (Case-Sensitive!)" name="search" href="#">
           </form>
 {% if tracks.has_next %}
-      <a class="btn btn-default next" id="next" href="{{ url_for('tracksPage',page=tracks.next_num) }}" rel="next">Next</a>
+      <a class="btn btn-default next" id="next" href="#" rel="next">Next</a>
     {% endif %}
 </div>
         <div class="row no-gutters">
