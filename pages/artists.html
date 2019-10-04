@@ -44,26 +44,26 @@ permalink: /artists/
           <h2 class="text-secondary mb-5">Artists</h2>
         </div>
 <div class="sortSearch">
-        <a class="btn btn-default" href="{{ url_for('artistsPage',page=1,sort='artist_name',direction='asc') }}">Sort by Artist Name (asc)</a>
-<a class="btn btn-default" href="{{ url_for('artistsPage',page=1,sort='popularity',direction='asc') }}">Sort by Popularity (asc)</a>
-<a class="btn btn-default" href="{{ url_for('artistsPage',page=1,sort='followers',direction='asc') }}">Sort by Followers (asc)</a>
+        <a class="btn btn-default" href="#">Sort by Artist Name (asc)</a>
+<a class="btn btn-default" href="#">Sort by Popularity (asc)</a>
+<a class="btn btn-default" href="#">Sort by Followers (asc)</a>
 <br>
-        <a class="btn btn-default" href="{{ url_for('artistsPage',page=1,sort='artist_name',direction='desc') }}">Sort by Artist Name (desc)</a>
-        <a class="btn btn-default" href="{{ url_for('artistsPage',page=1,sort='popularity',direction='desc') }}">Sort by Popularity (desc)</a>
-        <a class="btn btn-default" href="{{ url_for('artistsPage',page=1,sort='followers',direction='desc') }}">Sort by Followers (desc)</a>
+        <a class="btn btn-default" href="#">Sort by Artist Name (desc)</a>
+        <a class="btn btn-default" href="#">Sort by Popularity (desc)</a>
+        <a class="btn btn-default" href="#">Sort by Followers (desc)</a>
 <br>
 {% if artists.has_prev %}
-      <a class="btn btn-default prev" id="prev" href="{{ url_for('artistsPage',page=artists.prev_num) }}" rel="prev">Prev</a>
+      <a class="btn btn-default prev" id="prev" href="#" rel="prev">Prev</a>
     {% endif %}
         <form>
-          <input id="search" type="text" placeholder="Search (Case-Sensitive!)" name="search" href="{{ url_for('artistsPage',page=1) }}">
+          <input id="search" type="text" placeholder="Search (Case-Sensitive!)" name="search" href="#">
         </form>
 {% if artists.has_next %}
-      <a class="btn btn-default next" id="next" href="{{ url_for('artistsPage',page=artists.next_num) }}" rel="next">Next</a>
+      <a class="btn btn-default next" id="next" href="#" rel="next">Next</a>
     {% endif %}
 </div>
         <div class="row no-gutters">
-          {% for row in artists.items %}
+          {% for row in site.data.artists %}
           <div class="col-lg-6">
             <a class="portfolio-item" href="{{row.artist_id}}" onmouseover=Show("{{row.artist_id}}") onmouseout=Hide("{{row.artist_id}}")>
               <span class="caption">

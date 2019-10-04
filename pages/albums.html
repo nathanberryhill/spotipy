@@ -43,32 +43,32 @@ permalink: /albums/
           <h2 class="text-secondary mb-5">Albums</h2>
         </div>
 <div class="sortSearch">
-          <a class="btn btn-default" href="{{ url_for('albumsPage',page=1,sort='album_name',direction='asc') }}">Sort by Album Name (asc)</a>
+          <a class="btn btn-default" href="#">Sort by Album Name (asc)</a>
 <a class="btn btn-default" href="{{ url_for('albumsPage',page=1,sort='number_tracks',direction='asc') }}">Sort by Number Tracks (asc)</a>
 <br>
-          <a class="btn btn-default" href="{{ url_for('albumsPage',page=1,sort='album_name',direction='desc') }}">Sort by Album Name (desc)</a>
-          <a class="btn btn-default" href="{{ url_for('albumsPage',page=1,sort='number_tracks',direction='desc') }}">Sort by Number Tracks (desc)</a><br>
+          <a class="btn btn-default" href="#">Sort by Album Name (desc)</a>
+          <a class="btn btn-default" href="#">Sort by Number Tracks (desc)</a><br>
     {% if albums.has_prev %}
-      <a class="btn btn-default" id="prev" href="{{ url_for('albumsPage',page=albums.prev_num) }}" rel="prev">Prev</a>
+      <a class="btn btn-default" id="prev" href="#" rel="prev">Prev</a>
     {% endif %}
           <form>
-            <input id="search" type="text" placeholder="Search (Case-Sensitive!)" name="search" href="{{ url_for('albumsPage',page=1) }}">
+            <input id="search" type="text" placeholder="Search (Case-Sensitive!)" name="search" href="#">
           </form>
 {% if albums.has_next %}
-      <a class="btn btn-default" id="next" href="{{ url_for('albumsPage',page=albums.next_num) }}" rel="next">Next</a>
+      <a class="btn btn-default" id="next" href="#" rel="next">Next</a>
     {% endif %}
 </div>
         <div class="row no-gutters">
-          {% for album in site.data.albums %}
+          {% for row in site.data.albums %}
           <div class="col-lg-6">
-            <a class="portfolio-item" href="{{album.album_id}}" onmouseover=Show("{{album.album_id}}") onmouseout=Hide("{{album.album_id}}")>
+            <a class="portfolio-item" href="{{row.album_id}}" onmouseover=Show("{{row.album_id}}") onmouseout=Hide("{{row.album_id}}")>
               <span class="caption">
-                <span id="{{album.album_id}}" class="caption-content" style="display:none">
-                  <h2>{{album.album_name}}</h2>
-                  <p class="mb-0">by {{album.artist_name}}</p>
+                <span id="{{row.album_id}}" class="caption-content" style="display:none">
+                  <h2>{{row.album_name}}</h2>
+                  <p class="mb-0">by {{row.artist_name}}</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{{album.img}}" alt="">
+              <img class="img-fluid" src="{{row.img}}" alt="">
             </a>
           </div>
           {% endfor %} 
