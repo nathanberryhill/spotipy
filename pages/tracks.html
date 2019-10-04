@@ -62,7 +62,7 @@ permalink: /tracks/
     {% endif %}
 </div>
         <div class="row no-gutters">
-          {% for row in site.data.tracks limit:6 %}
+          {% for row in site.data.tracks_subset limit:6 %}
           <div class="col-lg-6">
             <a class="portfolio-item" href="{{row.track_id}}" onmouseover=Show("{{row.track_id}}") onmouseout=Hide("{{row.track_id}}")>
               <span class="caption">
