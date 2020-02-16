@@ -1,0 +1,73 @@
+---
+title: album path
+permalink: /albums/:id/
+albumInfo: site.data.albums
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{albumInfo[1]['album name']}}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/spotipy/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+<link href="/spotipy/assets/css/artist_splash.css" rel="stylesheet">
+      
+    <!-- Albums CSS -->
+    <link href="/spotipy/assets/css/artists.css" rel="stylesheet">
+
+  </head>
+  <body id="page-top">
+<div class="inner">
+          <nav class="navbar navbar-dark nav-masthead justify-content-center">
+            <a class="nav-masthead nav-link" href="/spotipy/"><h5><img src='/spotipy/assets/images/logo.png' class="logo_img">SpotiPy</h5></a>
+            <a class="nav-link active" href="/about/"><h5>About</h5></a>
+            <a class="nav-link" href="/albums/"><h5>Albums</h5></a>
+            <a class="nav-link" href="/artists/"><h5>Artists</h5></a>
+            <a class="nav-link" href="/tracks/"><h5>Tracks</h5></a>
+          </nav>
+        </div>
+
+<!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h2 class="mb-5">{{ albumInfo[1]['album name'] }}</h2>
+        </div>
+
+<div class="wrapper">
+    <div class="one"><img src="{{albumInfo[1].img}}"></div>
+    <div class="two"><h1>Artist</h1><p><a href="{{ albumInfo[1]['artist id'] }}">{{ albumInfo[1]['artist name'] }}</a></p></div>
+    <div class="three"><h1>Album Type</h1><p>{{ albumInfo[1]['type'] }}</p></div>
+    <div class="four"><h1>Spotify ID</h1><p>{{ albumInfo[1]['album id'] }}</p></div>
+    <div class="five"><h1>Release Date</h1><p>{{ albumInfo[1]['release date'] }}</p></div>
+    <div class="six"><h1>Tracks in this Album</h1>
+{% for row in album_tracks %}
+<p><a href="{{url_for('tracks')}}{{row.track_id}}">{{row.track_name}}</a></p>
+{% endfor %}
+</div>
+</div>
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/spotipy/assets/js/jquery.min.js"></script>
+    <script src="/spotipy/assets/js/bootstrap.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="/spotipy/assets/js/stylish-portfolio.min.js"></script>
+
+
+        </div>
+      </section>
+    </body>
+</html>
+
