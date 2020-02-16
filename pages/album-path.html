@@ -66,7 +66,7 @@ layout: default
     albums = {{ site.data.albums | jsonify }};
     var $_GET=[];
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){$_GET[name]=value;});
-    var album = $_GET['album']
+    var album = $_GET['album'];
     $("#title").html = albums[album]['album name'];
     $("#h2").html = albums[album]['album name'];
     $("#img").attr('src',albums[album]['img']);
