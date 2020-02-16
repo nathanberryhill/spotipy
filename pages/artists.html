@@ -65,7 +65,7 @@ permalink: /artists/
         <div class="row no-gutters">
           {% for row in site.data.artists limit:6 %}
           <div class="col-lg-6">
-            <a class="portfolio-item" href="{{ row[0] }}" onmouseover=Show("{{ row[0] }}") onmouseout=Hide("{{ row[0] }}")>
+            <a class="portfolio-item" href="/artists/path/?artist={{ row[0] }}" onmouseover=Show("{{ row[0] }}") onmouseout=Hide("{{ row[0] }}")>
               <span class="caption">
                 <span class="caption-content" style="display:none" id="{{ row[0] }}">
                   <h2>{{ row[1]['artist name'] }}</h2>
