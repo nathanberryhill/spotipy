@@ -1,5 +1,5 @@
 ---
-permalink: /albums/path/
+permalink: /tracks/path/
 layout: default
 ---
 
@@ -19,9 +19,10 @@ layout: default
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-<link href="/spotipy/assets/css/artist_splash.css" rel="stylesheet">
-      
-    <!-- Albums CSS -->
+    <!-- Custom CSS -->
+    <link href="/spotipy/assets/css/artist_splash.css" rel="stylesheet">
+
+    <!-- Tracks CSS -->
     <link href="/spotipy/assets/css/artists.css" rel="stylesheet">
 
   </head>
@@ -45,15 +46,12 @@ layout: default
 
 <div class="wrapper">
     <div class="one"><img id="img" src=""></div>
-    <div class="two"><h1>Artist</h1><p><a id="artist" href=""></a></p></div>
-    <div class="three"><h1>Album Type</h1><p id="type"></p></div>
-    <div class="four"><h1>Spotify ID</h1><p id="id"></p></div>
-    <div class="five"><h1>Release Date</h1><p id="date"></p></div>
-    <!-- <div class="six"><h1>Tracks in this Album</h1>
-{% for row in album_tracks %}
-<p><a href="{{url_for('tracks')}}{{row.track_id}}">{{row.track_name}}</a></p>
-{% endfor %}
-</div>-->
+    <div class="two"><h1>Track ID</h1><p id="id"></p></div>
+    <div class="three"><h1>Album</h1><p><a id="album" href=""></a></p></div>
+    <div class="four"><h1>Artist</h1><p><a id="artist" href=""></a></p></div>
+    <div class="five"><h1>Type</h1><p id="type"></p></div>
+    <div class="six"><h1>Duration (ms)</h1><p id="duration"></a></p></div>
+    <div class="seven"><h1>Explicit</h1><p id="explicit"></a></p></div>
 </div>
 
 <!-- Bootstrap core JavaScript -->
@@ -63,20 +61,26 @@ layout: default
     <!-- Custom scripts for this template -->
     <script src="/spotipy/assets/js/stylish-portfolio.min.js"></script>
     <script>
-    albums = {{ site.data.albums | jsonify }};
+    tracks = {{ site.data.tracks | jsonify }};
     var $_GET=[];
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){$_GET[name]=value;});
-    var album = $_GET['album'];
-    $("#title").html(albums[album]['album name']);
-    $("#h2").html(albums[album]['album name']);
-    $("#img").attr('src',albums[album]['img']);
-    $("#artist").attr('href',"/artists/path/?artist=" + albums[album]['artist id']);
-    $("#artist").html(albums[album]['artist name']);
-    $("#type").html(albums[album]['type']);
-    $("#id").html(album);
-    $("#date").html(albums[album]['release date']);
+    var track = $_GET['track'];
+    $("#title").html(tracks[track]['track name']);
+    $("#h2").html(tracks[track]['track name']);
+    $("#img").attr('src',tracks[track]['img']);
+    $("#id").html(track);
+    $("#album").attr('href',"/albums/path/?album=" + tracks[track]['album id']);
+    $("#album").html(tracks[track]['album name'])
+    $("#artist").attr('href',"/artists/path/?artist=" + tracks[track]['artist id'])
+    $("#artist").html(tracks[track]['artist name']);
+    $("#type").html(tracks[track]['type']);
+    $("#duration").html(tracks[track]['duration']);
+    $("#explicit").html(tracks[track]['explicit']);
 </script>
+
+
         </div>
       </section>
     </body>
 </html>
+

@@ -1,3 +1,8 @@
+---
+permalink: /artists/path/
+layout: default
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{artistInfo.artist_name}}</title>
+    <title id="title"></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/spotipy/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -24,10 +29,10 @@
 <div class="inner">
           <nav class="navbar navbar-dark nav-masthead justify-content-center">
             <a class="nav-masthead nav-link" href="/spotipy/"><h5><img src='/spotipy/assets/images/logo.png' class="logo_img">SpotiPy</h5></a>
-            <a class="nav-link active" href="/about/"><h5>About</h5></a>
-            <a class="nav-link" href="/albums/"><h5>Albums</h5></a>
-            <a class="nav-link" href="/artists/"><h5>Artists</h5></a>
-            <a class="nav-link" href="/tracks/"><h5>Tracks</h5></a>
+            <a class="nav-link active" href="/spotipy/about/"><h5>About</h5></a>
+            <a class="nav-link" href="/spotipy/albums/"><h5>Albums</h5></a>
+            <a class="nav-link" href="/spotipy/artists/"><h5>Artists</h5></a>
+            <a class="nav-link" href="/spotipy/tracks/"><h5>Tracks</h5></a>
           </nav>
         </div>
 
@@ -35,16 +40,15 @@
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
-          <h2 class="mb-5">{{artistInfo.artist_name}}</h2>
+          <h2 id="h2" class="mb-5"></h2>
         </div>
 
 <div class="wrapper">
-    <div class="one"><img src="{{artistInfo.img}}"></div>
-    <div class="two"><h1>Genres</h1><p>
-          {{artistInfo.genre}}</p></div>
-    <div class="three"><h1>Popularity</h1><p>{{artistInfo.popularity}}</p></div>
-    <div class="four"><h1>Spotify ID</h1><p>{{artistInfo.artist_id}}</p></div>
-    <div class="five"><h1>Followers</h1><p>{{artistInfo.followers}}</p></div>
+    <div class="one"><img id="img" src=""></div>
+    <div class="two"><h1>Genres</h1><p id="genre"></p></div>
+    <div class="three"><h1>Popularity</h1><p id="popularity"></p></div>
+    <div class="four"><h1>Spotify ID</h1><p id="id">{{artistInfo.artist_id}}</p></div>
+    <div class="five"><h1>Followers</h1><p id="followers">{{artistInfo.followers}}</p></div>
     <div class="six"><h1>Featured Albums</h1>
 {% for row in artist_albums %}
 <p><a href="{{url_for('albums')}}{{row.album_id}}">{{row.album_name}}</a></p>
@@ -64,7 +68,19 @@
     <!-- Custom scripts for this template -->
     <script src="/spotipy/assets/js/stylish-portfolio.min.js"></script>
 
-
+    <script>
+    artists = {{ site.data.artists | jsonify }};
+    var $_GET=[];
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){$_GET[name]=value;});
+    var artist = $_GET['artist'];
+    $("#title").html(artists[artist]['artist name']);
+    $("#h2").html(artists[artist]['artist name']);
+    $("#img").attr('src',artists[artist]['img']);
+    $("#genre").html(artists[artist]['genre'])
+    $("#popularity").html(artists[artist]['popularity'])
+    $("#id").html(artist);
+    $("#followers").html(artists[artist]['followers']);
+</script>
         </div>
       </section>
     </body>
