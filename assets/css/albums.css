@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kumar+One+Outline');
 @import url('https://fonts.googleapis.com/css?family=Pattaya');
 
-@-webkit-keyframes dynBackground {
+/* @-webkit-keyframes dynBackground {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -24,7 +24,7 @@
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-}
+} */
 .masthead {
     margin-bottom: 0;
 }
@@ -74,15 +74,15 @@ html {
 }
 
 body {
-    background: #ee0979;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #6561a7, #b268c0, #77cbd2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #6561a7, #b268c0, #77cbd2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background: #ee0979; */  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #6561a7, #b268c0, #77cbd2);*/  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #6561a7, #b268c0, #77cbd2);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
     background-size: 600% 600%;
-    -webkit-animation: dynBackground 30s ease infinite;
+    /*-webkit-animation: dynBackground 30s ease infinite;
     -moz-animation: dynBackground 30s ease infinite;
-    animation: dynBackground 30s ease infinite;
+    animation: dynBackground 30s ease infinite;*/
     font-family: 'Poiret One'
 }
 
@@ -179,8 +179,8 @@ h6 {
     height: auto;
     padding-top: 8rem;
     padding-bottom: 8rem;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, .1))), url(../img/bg-masthead.jpg);
-    background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 100%), url(../img/bg-masthead.jpg);
+    /*background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .1)), to(rgba(255, 255, 255, .1))), url(../img/bg-masthead.jpg);
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1) 0, rgba(255, 255, 255, .1) 100%), url(../img/bg-masthead.jpg);*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover
