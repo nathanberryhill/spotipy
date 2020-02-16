@@ -61,7 +61,7 @@ permalink: /albums/
         <div class="row no-gutters">
           {% for album in site.data.albums limit:6 %}
           <div class="col-lg-6">
-            <a class="portfolio-item" href="{{ album[0] }}" onmouseover=Show("{{ album[0] }}") onmouseout=Hide("{{ album[0] }}")>
+            <a class="portfolio-item" href="/spotipy/albums/path/?album={{ album[0] }}" onmouseover=Show("{{ album[0] }}") onmouseout=Hide("{{ album[0] }}")>
               <span class="caption">
                 <span id="{{ album[0] }}" class="caption-content" style="display:none">
                   <h2>{{ album[1]['album name'] }}</h2>

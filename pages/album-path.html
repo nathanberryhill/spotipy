@@ -1,6 +1,5 @@
 ---
-permalink: /albums/:path
-albumInfo: site.data.albums
+permalink: /albums/path/
 layout: default
 ---
 
@@ -12,7 +11,7 @@ layout: default
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ albumInfo[1]['album name'] }}</title>
+    <title id="title"></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/spotipy/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -41,15 +40,15 @@ layout: default
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
-          <h2 class="mb-5">{{ albumInfo[1]['album name'] }}</h2>
+          <h2 id="h2" class="mb-5"></h2>
         </div>
 
 <div class="wrapper">
-    <div class="one"><img src="{{ albumInfo[1].img }}"></div>
-    <div class="two"><h1>Artist</h1><p><a href="{{ albumInfo[1]['artist id'] }}">{{ albumInfo[1]['artist name'] }}</a></p></div>
-    <div class="three"><h1>Album Type</h1><p>{{ albumInfo[1]['type'] }}</p></div>
-    <div class="four"><h1>Spotify ID</h1><p>{{ path }}</p></div>
-    <div class="five"><h1>Release Date</h1><p>{{ albumInfo[1]['release date'] }}</p></div>
+    <div class="one"><img id="img" src=""></div>
+    <div class="two"><h1>Artist</h1><p><a id="artist" href=""></a></p></div>
+    <div class="three"><h1>Album Type</h1><p id="type"></p></div>
+    <div class="four"><h1>Spotify ID</h1><p id="id"></p></div>
+    <div class="five"><h1>Release Date</h1><p id="date"></p></div>
     <!-- <div class="six"><h1>Tracks in this Album</h1>
 {% for row in album_tracks %}
 <p><a href="{{url_for('tracks')}}{{row.track_id}}">{{row.track_name}}</a></p>
@@ -63,10 +62,21 @@ layout: default
 
     <!-- Custom scripts for this template -->
     <script src="/spotipy/assets/js/stylish-portfolio.min.js"></script>
-
-
+    <script type="text/javascript" src="{{ site.data.albums }}"></script>
+    <script>
+    var $_GET=[];
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){$_GET[name]=value;});
+    var album = $_GET['album']
+    $("#title").text = albums[album][1]['album name'];
+    $("#h2").text = albums[album][1]['album name'];
+    $("#img").attr('src',albums[album][1]['img']);
+    $("#artist").attr('href',albums[album][1]['artsist id']);
+    $("#artist").text = albums[album][1]['artsist name'];
+    $("#type").text = albums[album][1]['type'];
+    $("#id").text = album;
+    $("#date").text = albums[album][1]['release date'];
+</script>
         </div>
       </section>
     </body>
 </html>
-
