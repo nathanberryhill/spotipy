@@ -67,14 +67,14 @@ layout: default
     var $_GET=[];
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){$_GET[name]=value;});
     var album = $_GET['album']
-    $("#title").text = albums[album]['album name'];
-    $("#h2").text = albums[album]['album name'];
+    $("#title").innerHTML = albums[album]['album name'];
+    $("#h2").innerHTML = albums[album]['album name'];
     $("#img").attr('src',albums[album]['img']);
     $("#artist").attr('href',albums[album]['artsist id']);
-    $("#artist").text = albums[album]['artsist name'];
-    $("#type").text = albums[album]['type'];
-    $("#id").text = album;
-    $("#date").text = albums[album]['release date'];
+    $("#artist").innerHTML = albums[album]['artsist name'];
+    $("#type").innerHTML = albums[album]['type'];
+    $("#id").innerHTML = album;
+    $("#date").innerHTML = albums[album]['release date'];
 </script>
         </div>
       </section>
