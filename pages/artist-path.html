@@ -47,8 +47,8 @@ layout: default
     <div class="one"><img id="img" src=""></div>
     <div class="two"><h1>Genres</h1><p id="genre"></p></div>
     <div class="three"><h1>Popularity</h1><p id="popularity"></p></div>
-    <div class="four"><h1>Spotify ID</h1><p id="id">{{artistInfo.artist_id}}</p></div>
-    <div class="five"><h1>Followers</h1><p id="followers">{{artistInfo.followers}}</p></div>
+    <div class="four"><h1>Spotify ID</h1><p id="id"></p></div>
+    <div class="five"><h1>Followers</h1><p id="followers"></p></div>
     <div class="six"><h1>Featured Albums</h1>
 {% for row in artist_albums %}
 <p><a href="{{url_for('albums')}}{{row.album_id}}">{{row.album_name}}</a></p>
