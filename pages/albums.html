@@ -63,7 +63,7 @@ permalink: /albums/
           <div class="col-lg-6">
             <a class="portfolio-item" href="{{ site.data.albums[album]['album id'] }}" onmouseover=Show("{{ site.data.albums[album]['album id'] }}") onmouseout=Hide("{{site.data.albums[album]['album id'}}")>
               <span class="caption">
-                <span id="{{ album['album id'] }}" class="caption-content" style="display:none">
+                <span id="{{ site.data.albums[album]['album id'] }}" class="caption-content" style="display:none">
                   <h2>{{ site.data.albums[album]['album name'] }}</h2>
                   <p class="mb-0">by {{ site.data.albums[album]['artist name'] }}</p>
                 </span>
