@@ -64,11 +64,11 @@ permalink: /tracks/
         <div class="row no-gutters">
           {% for row in site.data.tracks_subset limit:6 %}
           <div class="col-lg-6">
-            <a class="portfolio-item" href="{{row.track_id}}" onmouseover=Show("{{row.track_id}}") onmouseout=Hide("{{row.track_id}}")>
+            <a class="portfolio-item" href="{{ row[0] }}" onmouseover=Show("{{ row[0] }}") onmouseout=Hide("{{ row[0] }}")>
               <span class="caption">
-                <span class="caption-content" id="{{row.track_id}}" style="display:none">
-                  <h2>{{row.track_name}}</h2>
-                  <p class="mb-0">{{row.type}}</p>
+                <span class="caption-content" id="{{ row[0] }}" style="display:none">
+                  <h2>{{ row[2]['track name'] }}</h2>
+                  <p class="mb-0">{{ row[1]['type'] }}</p>
                 </span>
               </span>
              <img class="img-fluid" src="/spotipy/assets/images/trackStock.jpg" alt="">

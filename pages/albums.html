@@ -61,14 +61,14 @@ permalink: /albums/
         <div class="row no-gutters">
           {% for album in site.data.albums limit:6 %}
           <div class="col-lg-6">
-            <a class="portfolio-item" href="{{ site.data.albums[album]['album id'] }}" onmouseover=Show("{{ site.data.albums[album]['album id'] }}") onmouseout=Hide("{{site.data.albums[album]['album id'}}")>
+            <a class="portfolio-item" href="{{ album[0] }}" onmouseover=Show("{{ album[0] }}") onmouseout=Hide("{{ album[0] }}")>
               <span class="caption">
-                <span id="{{ site.data.albums[album]['album id'] }}" class="caption-content" style="display:none">
-                  <h2>{{ site.data.albums[album]['album name'] }}</h2>
-                  <p class="mb-0">by {{ site.data.albums[album]['artist name'] }}</p>
+                <span id="{{ album[0] }}" class="caption-content" style="display:none">
+                  <h2>{{ album[1]['album name'] }}</h2>
+                  <p class="mb-0">by {{ album[1]['artist name'] }}</p>
                 </span>
               </span>
-              <img class="img-fluid" src="{{ site.data.albums[album]['img'] }}" alt="">
+              <img class="img-fluid" src="{{ album[1].img }}" alt="">
             </a>
           </div>
           {% endfor %} 
