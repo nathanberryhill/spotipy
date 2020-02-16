@@ -67,7 +67,7 @@ layout: default
     var track = $_GET['track'];
     $("#title").html(tracks[track]['track name']);
     $("#h2").html(tracks[track]['track name']);
-    $("#img").attr("/spotipy/assets/images/trackStock.jpg");
+    $("#img").attr("src","/spotipy/assets/images/trackStock.jpg");
     $("#id").html(track);
     $("#album").attr('href',"/spotipy/albums/path/?album=" + tracks[track]['album id']);
     $("#album").html(tracks[track]['album name'])
