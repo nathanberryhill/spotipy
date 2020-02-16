@@ -1,6 +1,6 @@
 ---
-permalink: /albums/:title/
-albumInfo: site.data.albums[title]
+permalink: /albums/:path/
+albumInfo: site.data.albums[path]
 layout: default
 ---
 
@@ -48,7 +48,7 @@ layout: default
     <div class="one"><img src="{{ albumInfo[1].img }}"></div>
     <div class="two"><h1>Artist</h1><p><a href="{{ albumInfo[1]['artist id'] }}">{{ albumInfo[1]['artist name'] }}</a></p></div>
     <div class="three"><h1>Album Type</h1><p>{{ albumInfo[1]['type'] }}</p></div>
-    <div class="four"><h1>Spotify ID</h1><p>{{ title }}</p></div>
+    <div class="four"><h1>Spotify ID</h1><p>{{ path }}</p></div>
     <div class="five"><h1>Release Date</h1><p>{{ albumInfo[1]['release date'] }}</p></div>
     <!-- <div class="six"><h1>Tracks in this Album</h1>
 {% for row in album_tracks %}
