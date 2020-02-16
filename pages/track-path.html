@@ -67,11 +67,11 @@ layout: default
     var track = $_GET['track'];
     $("#title").html(tracks[track]['track name']);
     $("#h2").html(tracks[track]['track name']);
-    $("#img").attr('src',tracks[track]['img']);
+    $("#img").attr("/spotipy/assets/images/trackStock.jpg");
     $("#id").html(track);
-    $("#album").attr('href',"/albums/path/?album=" + tracks[track]['album id']);
+    $("#album").attr('href',"/spotipy/albums/path/?album=" + tracks[track]['album id']);
     $("#album").html(tracks[track]['album name'])
-    $("#artist").attr('href',"/artists/path/?artist=" + tracks[track]['artist id'])
+    $("#artist").attr('href',"/spotipy/artists/path/?artist=" + tracks[track]['artist id'])
     $("#artist").html(tracks[track]['artist name']);
     $("#type").html(tracks[track]['type']);
     $("#duration").html(tracks[track]['duration']);
