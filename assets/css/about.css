@@ -6,6 +6,7 @@
 /*
  * Header
  */
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 /*
 @-webkit-keyframes dynBackground {
@@ -84,18 +85,18 @@ body {
     -webkit-animation: dynBackground 30s ease infinite;
     -moz-animation: dynBackground 30s ease infinite;
     animation: dynBackground 30s ease infinite;*/
-    font-family: 'Times New Roman';
+    font-family: 'Roboto', serif;
 }
 
 h1 {
-    font-family: 'Times New Roman';
+    font-family: 'Roboto', serif;
     font-size:200%;
 }
 h2 {
     color:white;
     font-size:500%;
     margin-bottom:5%;
-    font-family:"Futura";
+    font-family:"Roboto";
 }
 h5 { 
  font-size:150%;}
