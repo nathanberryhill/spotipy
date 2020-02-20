@@ -40,7 +40,7 @@ permalink: /artists/
           <h3 class="text-secondary mb-0"></h3>
           <h2 class="text-secondary mb-5">Artists</h2>
         </div>
-<div class="sortSearch">
+<!-- <div class="sortSearch">
         <a class="btn btn-default" href="#">Sort by Artist Name (asc)</a>
 <a class="btn btn-default" href="#">Sort by Popularity (asc)</a>
 <a class="btn btn-default" href="#">Sort by Followers (asc)</a>
@@ -58,9 +58,9 @@ permalink: /artists/
 {% if artists.has_next %}
       <a class="btn btn-default next" id="next" href="#" rel="next">Next</a>
     {% endif %}
-</div>
+</div>-->For the purposes of this demonstration, sorting and searching have been disabled.
         <div class="row no-gutters">
-          {% for row in site.data.artists limit:6 %}
+          {% for row in site.data.artists limit:30 %}
           <div class="col-lg-6">
             <a class="portfolio-item" href="/spotipy/artists/path/?artist={{ row[0] }}" onmouseover=Show("{{ row[0] }}") onmouseout=Hide("{{ row[0] }}")>
               <span class="caption">

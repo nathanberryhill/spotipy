@@ -41,7 +41,7 @@ permalink: /tracks/
           <h3 class="text-secondary mb-0"></h3>
           <h2 class="text-secondary mb-5">Tracks</h2>
         </div>
-<div class="sortSearch">
+<!--<div class="sortSearch">
           <a class="btn btn-default" href="#">Sort by Track Name (asc)</a>
 <a class="btn btn-default" href="#">Sort by Duration (asc)</a>
 <br>
@@ -57,9 +57,9 @@ permalink: /tracks/
 {% if tracks.has_next %}
       <a class="btn btn-default next" id="next" href="#" rel="next">Next</a>
     {% endif %}
-</div>
+</div>-->For the purposes of this demonstration, sorting and searching have been disabled.
         <div class="row no-gutters">
-          {% for row in site.data.tracks_subset limit:6 %}
+          {% for row in site.data.tracks_subset limit:30 %}
           <div class="col-lg-6">
             <a class="portfolio-item" href="/spotipy/tracks/path/?track={{ row[0] }}" onmouseover=Show("{{ row[0] }}") onmouseout=Hide("{{ row[0] }}")>
               <span class="caption">
