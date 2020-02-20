@@ -59,6 +59,7 @@ layout: default
     <script src="/spotipy/assets/js/stylish-portfolio.min.js"></script>
     <script>
     tracks = {{ site.data.tracks_subset | jsonify }};
+    albums = {{ site.data.albums | jsonify }}
     var $_GET=[];
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(a,name,value){$_GET[name]=value;});
     var track = $_GET['track'];
@@ -67,7 +68,7 @@ layout: default
     $("#img").attr("src","/spotipy/assets/images/trackStock.jpg");
     $("#id").html(track);
     $("#album").attr('href',"/spotipy/albums/path/?album=" + tracks[track]['album id']);
-    $("#album").html(tracks[track]['album name'])
+    $("#album").html(albums[tracks[track]['album id']]['album name'])
     $("#artist").attr('href',"/spotipy/artists/path/?artist=" + tracks[track]['artist id'])
     $("#artist").html(tracks[track]['artist name']);
     $("#type").html(tracks[track]['type']);
